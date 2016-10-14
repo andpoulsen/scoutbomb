@@ -1,0 +1,2 @@
+Z:\!HP\Projekter\Software\ScoutBomb\ScoutBomb\obj\Release\ScoutBomb.exe
+Z:\!HP\Projekter\Software\ScoutBomb\ScoutBomb\obj\Release\ScoutBomb.pdb

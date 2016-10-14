@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScoutBombSettings>
+  <Timeout>00:01:00</Timeout>
+  <Penalty>00:00:10</Penalty>
+  <Question>Hvilken dag er det i dag?</Question>
+  <Question>Hvilken dag er det i morgen?</Question>
+  <Question>Mor og ?</Question>
+  <Question>18+2</Question>
+  <Question>Svaret er HEST</Question>
+  <Answer>LØRDAG</Answer>
+  <Answer>SØNDAG</Answer>
+  <Answer>FAR</Answer>
+  <Answer>20</Answer>
+  <Answer>HEST</Answer>
+</ScoutBombSettings>

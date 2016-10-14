@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScoutBombSettings>
+  <Timeout>00:01:00</Timeout>
+  <Penalty>00:00:10</Penalty>
+  <Question>HVADER</Question>
+  <Question>HVADER</Question>
+  <Question>HVADER</Question>
+  <Question>HVADER</Question>
+  <Question>HVADER</Question>
+  <Answer>A</Answer>
+  <Answer>B</Answer>
+  <Answer>C</Answer>
+  <Answer>C</Answer>
+  <Answer>C</Answer>
+</ScoutBombSettings>

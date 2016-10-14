@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ScoutBomb">
+</Property><Property Name="Solution File" Value="Z:\!HP\Projekter\Software\ScoutBomb\ScoutBomb.sln">
+</Property><Property Name="User Options File" Value="Z:\!HP\Projekter\Software\ScoutBomb\ScoutBomb.suo">
+</Property><Property Name="Date" Value="29. december 2009">
+</Property><Property Name="Time" Value="11:54">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ScoutBomb.sln" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ScoutBomb.suo" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb.suo">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\ScoutBomb.csproj" Description="Project file successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\ScoutBomb.csproj">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\MainForm.cs" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\MainForm.Designer.cs" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\MainForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\Program.cs" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\Program.cs">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\Properties\AssemblyInfo.cs" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\Properties\Resources.Designer.cs" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\Properties\Settings.Designer.cs" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\ClassDiagram1.cd" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\ClassDiagram1.cd">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\Properties\Settings.settings" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\answer.wav" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\answer.wav">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\beep100.wav" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\beep100.wav">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\beep25.wav" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\beep25.wav">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\beep75.wav" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\beep75.wav">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\beep50.wav" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\beep50.wav">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\disarm.wav" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\disarm.wav">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\config.xml" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\config.xml">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\disarmed.wav" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\disarmed.wav">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\explode.wav" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\explode.wav">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\plant.wav" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\plant.wav">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\punish.wav" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\punish.wav">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\MainForm.resx" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\Properties\Resources.resx" Description="File successfully backed up as Z:\!HP\Projekter\Software\ScoutBomb\Backup\ScoutBomb\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\ScoutBomb.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ScoutBomb" Source="ScoutBomb\ScoutBomb.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ScoutBomb.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ScoutBomb.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ScoutBomb" Source="ScoutBomb\ScoutBomb.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

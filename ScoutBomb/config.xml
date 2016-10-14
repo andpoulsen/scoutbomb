@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScoutBombSettings>
+  <Timeout>03:00:00</Timeout>
+  <Penalty>00:20:00</Penalty>
+  <Question>SVARET PÅ POST 3, OPGAVE 1 ER</Question>
+  <Question>SVARET PÅ POST 3, OPGAVE 2 ER</Question>
+  <Question>SVARET PÅ POST 3, OPGAVE 3 ER</Question>
+
+  <Question>HVEM ER MORDEREN</Question>
+  <Question>HVOR MANGE CIARETTER KAN DER LAVES</Question>
+  <Question>HVILKEN FARVE HAR BJØRNEN</Question>
+
+  <Question>HVAD SAGDE MASKINEN</Question>
+
+  <Question>HVAD STOD DER I BOGEN</Question>
+
+  <Question>HVAD STOD DER</Question>
+
+  <Question>HVILKET DYR</Question>
+
+  <Question>TIP EN 13'ER - sKRIV SVAR SOM F.EKS. 11XX22...</Question>
+
+  <Question>HVILKEN FARVE HAR KJOLE HAR FRU GREEN</Question>
+
+  <Question>HVEM ER DE 3 MÆND</Question>
+  <Question>HVOR MANGE DAGE SKAL SNEGLEN BRUGE FOR AT FLYGTE</Question>
+  <Question>ÅRETS KORTESTE MÅNED ER</Question>
+
+  <Question>SVARET PÅ POST 12, OPGAVE 1 ER</Question>
+  <Question>SVARET PÅ POST 12, OPGAVE 2 ER</Question>
+  <Question>SVARET PÅ POST 12, OPGAVE 3 ER</Question>
+  
+  <Answer>TOMME TØNDER BULDRER MEST</Answer>
+  <Answer>BRÆNDT BARN SKYR ILDEN</Answer>
+  <Answer>GØR MOD ANDRE SOM DU ØNSKER DE SKAL GØRE MOD DIG</Answer>
+
+  <Answer>CAROL</Answer>
+  <Answer>8</Answer>
+  <Answer>HVID</Answer>
+
+  <Answer>TROLDBORGVEJ</Answer>
+
+  <Answer>VÆR VELKOMMEN HERRENS ÅR OG GUD BEVARE DANMARK</Answer>
+
+  <Answer>KFXMWW</Answer>
+
+  <Answer>VANDMAND</Answer>
+
+  <Answer>21XX12X211222</Answer>
+
+  <Answer>BRUN</Answer>
+
+  <Answer>FARFAR FAR OG SØN</Answer>
+  <Answer>18</Answer>
+  <Answer>OKTOBER</Answer>
+
+  <Answer>UNDSKYLD VI FORSTYRRER MENS VI FORNYER</Answer>
+  <Answer>RIKKE</Answer>
+  <Answer>NU GLÆDER VI OS TIL AT SE HVOR SKATTEN ER</Answer>
+
+  <Picture>pic3.png</Picture>
+  <Picture>pic3.png</Picture>
+  <Picture>pic3.png</Picture>
+
+  <Picture>pic4.png</Picture>
+  <Picture>pic4.png</Picture>
+  <Picture>pic4.png</Picture>
+
+  <Picture>pic5.png</Picture>
+
+  <Picture>pic6.png</Picture>
+
+  <Picture>pic7.png</Picture>
+
+  <Picture>pic8.png</Picture>
+
+  <Picture>pic9.png</Picture>
+
+  <Picture>pic10.png</Picture>
+
+  <Picture>pic11.png</Picture>
+  <Picture>pic11.png</Picture>
+  <Picture>pic11.png</Picture>
+
+  <Picture>pic12.png</Picture>
+  <Picture>pic12.png</Picture>
+  <Picture>pic12.png</Picture>
+
+ <Finishpicture>pic13.png</Finishpicture>
+</ScoutBombSettings>
