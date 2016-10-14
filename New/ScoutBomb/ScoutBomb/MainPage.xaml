@@ -1,13 +1,22 @@
 ﻿<Page
-    x:Class="ScoutBomb.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ScoutBomb"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    xmlns:ViewModels="using:ScoutBomb.ViewModels"
+    x:Class="ScoutBomb.MainPage"
+    mc:Ignorable="d" RequestedTheme="Dark" d:DataContext="{d:DesignData /SampleData/MainPageViewModelSampleData.xaml}">
+
+    <Page.DataContext>
+        <ViewModels:MainPageViewModel/>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="CountDown" Grid.Row="0" Style="{StaticResource HeaderTextBlockStyle}" Text="{Binding TimeLeft}"/>
     </Grid>
 </Page>

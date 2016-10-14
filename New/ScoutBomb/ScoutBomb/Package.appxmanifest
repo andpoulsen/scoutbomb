@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="b9964cd6-0936-4dd6-a2dd-74cda7e672bf"
-    Publisher="CN=andpo"
+    Name="44ff6250-07c6-4d86-aeb0-9f580ab90476"
+    Publisher="CN=anderspoulsen"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="b9964cd6-0936-4dd6-a2dd-74cda7e672bf" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="44ff6250-07c6-4d86-aeb0-9f580ab90476" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>ScoutBomb</DisplayName>
-    <PublisherDisplayName>andpo</PublisherDisplayName>
+    <PublisherDisplayName>anderspoulsen</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
