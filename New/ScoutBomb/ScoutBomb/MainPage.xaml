@@ -4,7 +4,7 @@
     xmlns:local="using:ScoutBomb"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ViewModels="using:ScoutBomb.ViewModels"
+    xmlns:ViewModels="using:ScoutBomb.ViewModels" x:Name="TheMainPage"
     x:Class="ScoutBomb.MainPage"
     mc:Ignorable="d" RequestedTheme="Dark" d:DataContext="{d:DesignData /SampleData/MainPageViewModelSampleData.xaml}">
 
@@ -15,8 +15,17 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <TextBlock x:Name="CountDown" Grid.Row="0" Style="{StaticResource HeaderTextBlockStyle}" Text="{Binding TimeLeft}"/>
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <TextBlock Name="Question" Margin="0,0,0,20" FontSize="30">Spørgsmål</TextBlock>
+            <Button Name="Answer1" Click="Answer_Click" Margin="0,0,0,20" FontSize="30" >Svar</Button>
+            <Button Name="Answer2" Click="Answer_Click" Margin="0,0,0,20" FontSize="30" >Svar</Button>
+            <Button Name="Answer3" Click="Answer_Click" FontSize="30" >Svar</Button>
+            
+        </StackPanel>
+        <Button x:Name="StartButton" Grid.Row="2" HorizontalAlignment="Right" FontSize="30" Content="Start" Width="150" Click="Start_Click"/>
     </Grid>
 </Page>

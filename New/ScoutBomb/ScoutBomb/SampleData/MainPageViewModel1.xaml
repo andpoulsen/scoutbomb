@@ -1,0 +1,5 @@
+﻿<ViewModels:MainPageViewModel xmlns:ViewModels="using:ScoutBomb.ViewModels" xmlns:System="using:System">
+	<ViewModels:MainPageViewModel.TimeLeft>
+		<System:TimeSpan/>
+	</ViewModels:MainPageViewModel.TimeLeft>
+</ViewModels:MainPageViewModel>

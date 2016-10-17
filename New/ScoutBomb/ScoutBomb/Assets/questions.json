@@ -1,0 +1,54 @@
+﻿
+    [
+        {
+            "question": "Tryk på rigtigt",
+            "answers": [
+                {
+                    "answer": "rigtigt",
+                    "correct": true
+                },
+                {
+                    "answer": "forkert",
+                    "correct": false
+                },
+                {
+                    "answer": "forkert",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Tryk på rød",
+            "answers": [
+                {
+                    "answer": "rød",
+                    "correct": true
+                },
+                {
+                    "answer": "grøn",
+                    "correct": false
+                },
+                {
+                    "answer": "blå",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Hvor mange ben har en hund",
+            "answers": [
+                {
+                    "answer": "3",
+                    "correct": false
+                },
+                {
+                    "answer": "4",
+                    "correct": true
+                },
+                {
+                    "answer": "5",
+                    "correct": true
+                }
+            ]   
+        }
+    ]

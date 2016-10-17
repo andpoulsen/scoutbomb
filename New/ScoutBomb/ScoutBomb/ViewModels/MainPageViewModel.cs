@@ -1,13 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace ScoutBomb.ViewModels
 {
-    public class MainPageViewModel
+    public class MainPageViewModel : INotifyPropertyChanged
     {
-        public TimeSpan TimeLeft { get; set; }
+        private TimeSpan _timeLeft;
+
+        public TimeSpan TimeLeft
+        {
+            get { return _timeLeft; }
+            set
+            {
+                _timeLeft = value;
+                OnPropertyChanged("TimeLeft");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
