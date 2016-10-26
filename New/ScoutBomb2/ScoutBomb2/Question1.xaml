@@ -6,11 +6,47 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" RequestedTheme="Dark">
+    <Page.Resources>
+        <Storyboard x:Name="WrongAnswer">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="grid">
+                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="Red"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.7" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="grid" Background="Black">
+        <Button x:Name="btnBack" Style="{StaticResource NavigationBackButtonNormalStyle}" VerticalAlignment="Top" d:LayoutOverrides="Width, Height" Click="btnBack_Click"/>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="txbTimeLeft" TextWrapping="Wrap" Text="TextBlock"/>
+            <StackPanel x:Name="CountdownPanel" Orientation="Horizontal" HorizontalAlignment="Center" Style="{StaticResource CountdownPanelStyle}">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="Tid tilbage:" Margin="0,0,20,0"/>
+                <TextBlock x:Name="txtTimeLeft" TextWrapping="Wrap" Text="00:25:00" Margin="0,0,0.333,0"/>
+            </StackPanel>
+            <TextBlock x:Name="txtCode" TextWrapping="Wrap">
+                <Span FontFamily="Cambria">
+                    <Run Text="-.../---/--/-..././-.//.../-.-/.-/.-..//.-/..-./-.../.-./-.--/-.././...//"/>
+                </Span>
+            </TextBlock>
+            <StackPanel x:Name="HelpPanel1st" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock TextWrapping="Wrap" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Margin="0,0,20,20">
+                    <Run Text="Hjælp koster 30 sekunder"/>
+                </TextBlock>
+                <Button x:Name="btnGet1stHelp" Content="Hjælp" HorizontalAlignment="Center" Click="btnGet1stHelp_Click"/>
+            </StackPanel>
+            <Image x:Name="img1sthelp" Source="Assets/Morsenøgle.png" Height="200" Margin="0,0,0,20"/>
+            <Image x:Name="img2ndhelp" Source="Assets/MorseAlfabetet.png" Height="300" Margin="0,0,0,20"/>
+            <StackPanel x:Name="HelpPanel2nd" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:Name="textBlock1" TextWrapping="Wrap" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Margin="0,0,20,20">
+                    <Run Text="Ekstra hjælp koster 30 sekunder"/>
+                </TextBlock>
+                <Button x:Name="btn2ndGetHelp" Content="Hjælp" HorizontalAlignment="Center" Click="btn2ndGetHelp_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="AnswerPanel" Orientation="Horizontal" Style="{StaticResource AnswerPanelStyle}">
+                <TextBox x:Name="txbAnswer" TextWrapping="Wrap" Text="" PlaceholderText="Skriv svar her" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Margin="0,0,20,0"/>
+                <Button x:Name="btnAnswer" Content="Svar" VerticalAlignment="Center" Click="btnAnswer_Click"/>
+            </StackPanel>
         </StackPanel>
+
 
     </Grid>
 </Page>

@@ -23,6 +23,7 @@ namespace ScoutBomb2
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            ((App)App.Current).Easy = false;
             Frame.Navigate(typeof(Question1));
         }
     }
