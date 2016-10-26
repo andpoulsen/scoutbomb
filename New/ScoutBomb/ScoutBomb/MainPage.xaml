@@ -12,19 +12,24 @@
         <ViewModels:MainPageViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="CountDown" Grid.Row="0" Style="{StaticResource HeaderTextBlockStyle}" Text="{Binding TimeLeft}"/>
-        <StackPanel Grid.Row="1" Orientation="Vertical">
-            <TextBlock Name="Question" Margin="0,0,0,20" FontSize="30">Spørgsmål</TextBlock>
-            <Button Name="Answer1" Click="Answer_Click" Margin="0,0,0,20" FontSize="30" >Svar</Button>
-            <Button Name="Answer2" Click="Answer_Click" Margin="0,0,0,20" FontSize="30" >Svar</Button>
-            <Button Name="Answer3" Click="Answer_Click" FontSize="30" >Svar</Button>
-            
+        <StackPanel Margin="20,20,20,-20" Orientation="Horizontal" d:LayoutOverrides="Height">
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Tid tilbage" FontSize="35" Margin="0,0,20,0"/>
+            <TextBlock x:Name="CountDown" Style="{StaticResource HeaderTextBlockStyle}" Text="{Binding TimeLeft}" Height="100" Margin="0"/>
+        </StackPanel>
+        <StackPanel x:Name="QuestionsPanel" Grid.Row="1" Orientation="Vertical">
+            <TextBlock x:Name="Question" Margin="0,0,0,20" FontSize="30">
+                <Run Text="Spørgsmål"/>
+            </TextBlock>
+            <Button x:Name="Answer1" Click="Answer_Click" Margin="0,0,0,20" FontSize="30" Content="Svar" />
+            <Button x:Name="Answer2" Click="Answer_Click" Margin="0,0,0,20" FontSize="30" Content="Svar" />
+            <Button x:Name="Answer3" Click="Answer_Click" FontSize="30" Content="Svar" />
+
         </StackPanel>
         <Button x:Name="StartButton" Grid.Row="2" HorizontalAlignment="Right" FontSize="30" Content="Start" Width="150" Click="Start_Click"/>
     </Grid>

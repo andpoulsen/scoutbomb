@@ -20,13 +20,15 @@ namespace ScoutBomb
     {
         private int currentQuestion = 0;
         private ThreadPoolTimer timer, explodeTimer;
+        private TimeSpan time = new TimeSpan(0, 2, 0);
          
         public MainPage()
         {
             this.InitializeComponent();
-            this.ViewModel = new MainPageViewModel() { TimeLeft = new TimeSpan(0, 2, 0) };
+            this.ViewModel = new MainPageViewModel() { TimeLeft = time };
             this.DataContext = this.ViewModel;
             this.CountDown.Text = ViewModel.TimeLeft.ToString();
+            QuestionsPanel.Visibility = Visibility.Collapsed;
             
             ReadQuestions();
         }
@@ -68,17 +70,31 @@ namespace ScoutBomb
             this.timer.Cancel();
             TheMainPage.RequestedTheme = ElementTheme.Light;
             PlaySound("explode.wav");
-
+            var i = 0;
+            
             this.explodeTimer = ThreadPoolTimer.CreatePeriodicTimer(async (source) =>
             {
-                this.ViewModel.TimeLeft = this.ViewModel.TimeLeft.Subtract(new TimeSpan(0, 0, 1));
+                i++;
+
+                if (30 < i)
+                { this.explodeTimer.Cancel(); }
 
                 await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
                 {
-                    TheMainPage.RequestedTheme = TheMainPage.RequestedTheme==ElementTheme.Light ? ElementTheme.Dark : ElementTheme.Light;
+                    TheMainPage.RequestedTheme = TheMainPage.RequestedTheme == ElementTheme.Light ? ElementTheme.Dark : ElementTheme.Light;
                 });
             }, TimeSpan.FromMilliseconds(100));
+            
+            
+            StartButton.Visibility = Visibility.Visible;
+            QuestionsPanel.Visibility = Visibility.Collapsed;
+        }
 
+        private void Disarm()
+        {
+            this.timer.Cancel();
+            PlaySound("disarmed.wav");
+            QuestionsPanel.Visibility = Visibility.Collapsed;
             StartButton.Visibility = Visibility.Visible;
         }
 
@@ -87,6 +103,10 @@ namespace ScoutBomb
             this.timer = ThreadPoolTimer.CreatePeriodicTimer(async (source) =>
             {   
                 this.ViewModel.TimeLeft = this.ViewModel.TimeLeft.Subtract(new TimeSpan(0, 0, 1));
+                if(this.ViewModel.TimeLeft.TotalSeconds < 0)
+                {
+                    this.ViewModel.TimeLeft = new TimeSpan();
+                }
 
                 await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
                 {
@@ -114,8 +134,6 @@ namespace ScoutBomb
                     {
                         PlaySound("beep100.wav");
                     }
-
-
                 });
             }
                 , new TimeSpan(0, 0, 1));
@@ -141,32 +159,35 @@ namespace ScoutBomb
 
             if (answer.correct)
             {
-                PlaySound("disarm.wav");
-            }else
+                if (Questions.Length <= currentQuestion+1)
+                {
+                    Disarm();
+                }
+                else
+                {
+                    PlaySound("disarm.wav");
+                    currentQuestion++;
+                    AskQuestion();
+                }
+            }
+            else
             {
                 PlaySound("punish.wav");
                 this.ViewModel.TimeLeft = this.ViewModel.TimeLeft.Subtract(new TimeSpan(0, 0, 20));
             }
 
-            currentQuestion++;
-
-            if (Questions.Length <= currentQuestion)
-            {
-                this.timer.Cancel();
-                PlaySound("disarmed.wav");
-            }
-            else
-            {
-                AskQuestion();
-            }
+            
+            
         }
 
         private void Start_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             currentQuestion = 0;
+            this.ViewModel.TimeLeft = time;
             StartButton.Visibility = Visibility.Collapsed;
             StartTimer();
             AskQuestion();
+            QuestionsPanel.Visibility = Visibility.Visible;
         }
     }
 }

@@ -56,7 +56,20 @@ namespace ScoutBomb2
 
         private void btnAnswer_Click(object sender, RoutedEventArgs e)
         {
-            if(string.Compare(txbAnswer.Text.Trim(), "BOMBEN SKAL AFBRYDES", true)==0)
+            TestAnswer();
+        }
+
+        private void txbAnswer_KeyDown(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                TestAnswer();
+            }
+        }
+
+        private void TestAnswer()
+        {
+            if (string.Compare(txbAnswer.Text.Trim(), "BOMBEN SKAL AFBRYDES", true) == 0)
             {
                 Frame.Navigate(typeof(Disarmed));
             }
