@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml;
+﻿using Windows.UI.ViewManagement;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -13,6 +14,9 @@ namespace ScoutBomb2
         public MainPage()
         {
             this.InitializeComponent();
+
+            var view = ApplicationView.GetForCurrentView();
+            view.TryEnterFullScreenMode();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

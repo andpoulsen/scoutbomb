@@ -1,4 +1,5 @@
 ﻿using System;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -16,7 +17,7 @@ namespace ScoutBomb2
             InitializeComponent();
             var timeLeft = ((App)Application.Current).TimeLeft = new TimeSpan(0, 25, 0);
             txtTimeLeft.Text = timeLeft.ToString();
-
+            
             if (((App)App.Current).Easy)
             {
                 HelpPanel1st.Visibility = Visibility.Collapsed;
