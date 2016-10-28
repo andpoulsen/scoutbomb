@@ -11,27 +11,25 @@ namespace ScoutBomb2
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Question3 : Page
+    public sealed partial class Question4 : Page
     {
         private ThreadPoolTimer _timer;
 
-        public Question3()
+        public Question4()
         {
             InitializeComponent();
             var timeLeft = ((App)Application.Current).TimeLeft;
             txtTimeLeft.Text = timeLeft.ToString();
-            
             if (((App)Application.Current).Easy)
             {
+                imgHelp.Visibility = Visibility.Visible;
                 HelpPanel1st.Visibility = Visibility.Collapsed;
-                img2ndhelp.Visibility = Visibility.Collapsed;
             }
             else
             {
-                img1sthelp.Visibility = Visibility.Collapsed;
-                img2ndhelp.Visibility = Visibility.Collapsed;
-                HelpPanel2nd.Visibility = Visibility.Collapsed;
+                imgHelp.Visibility = Visibility.Collapsed;
             }
+            
         }
 
         private void StartTicking()
@@ -58,17 +56,8 @@ namespace ScoutBomb2
         private void btnGet1stHelp_Click(object sender, RoutedEventArgs e)
         {
             ((App)Application.Current).Punish(30);
-            img1sthelp.Visibility = Visibility.Visible;
             HelpPanel1st.Visibility = Visibility.Collapsed;
-            HelpPanel2nd.Visibility = Visibility.Visible;
-        }
-
-        private void btn2ndGetHelp_Click(object sender, RoutedEventArgs e)
-        {
-            ((App)Application.Current).Punish(30);
-            img1sthelp.Visibility = Visibility.Collapsed;
-            img2ndhelp.Visibility = Visibility.Visible;
-            HelpPanel2nd.Visibility = Visibility.Collapsed;
+            imgHelp.Visibility = Visibility.Visible;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -94,9 +83,10 @@ namespace ScoutBomb2
 
         private void TestAnswer()
         {
-            if (string.Compare(txbAnswer.Text.Trim(), "BOMBEN ER SVÆR AT AFBRYDE", StringComparison.OrdinalIgnoreCase) == 0)
+            if (string.Compare(txbAnswer.Text.Trim(), "Anders er for sej til at programmere", StringComparison.OrdinalIgnoreCase) == 0)
             {
-                Frame.Navigate(typeof(Question4));
+                ((App)Application.Current).Punish(-600);
+                Frame.Navigate(typeof(Disarmed));
             }
             else
             {

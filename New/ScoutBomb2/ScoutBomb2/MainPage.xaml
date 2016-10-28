@@ -9,8 +9,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="button" Content="Start (Mikro)" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,20" Click="button_Click"/>
-            <Button x:Name="button1" Content="Start (Trop)" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="button1_Click"/>
+            <Button x:Name="button" Content="Start Mikro / Mini" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,20" Click="button_Click"/>
+            <Button x:Name="button1" Content="Start Junior / Trop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="button1_Click"/>
         </StackPanel>
 
     </Grid>

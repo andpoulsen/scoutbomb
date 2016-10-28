@@ -105,6 +105,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question4.xaml.cs">
+      <DependentUpon>Question4.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Question3.xaml.cs">
       <DependentUpon>Question3.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,7 @@
     <None Include="ScoutBomb2_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\aknøgle.png" />
     <Content Include="Assets\beep100.wav" />
     <Content Include="Assets\beep75.wav" />
     <Content Include="Assets\disarm.wav" />
@@ -157,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Question4.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
