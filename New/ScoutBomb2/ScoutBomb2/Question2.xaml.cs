@@ -11,27 +11,16 @@ namespace ScoutBomb2
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Question1 : Page
+    public sealed partial class Question2 : Page
     {
         private ThreadPoolTimer _timer;
 
-        public Question1()
+        public Question2()
         {
             InitializeComponent();
-            var timeLeft = ((App)Application.Current).TimeLeft = new TimeSpan(0, 25, 0);
+            var timeLeft = ((App)Application.Current).TimeLeft;
             txtTimeLeft.Text = timeLeft.ToString();
-            
-            if (((App)App.Current).Easy)
-            {
-                HelpPanel1st.Visibility = Visibility.Collapsed;
-                img2ndhelp.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                img1sthelp.Visibility = Visibility.Collapsed;
-                img2ndhelp.Visibility = Visibility.Collapsed;
-                HelpPanel2nd.Visibility = Visibility.Collapsed;
-            }
+            txtAnswer.Visibility = Visibility.Collapsed;
         }
 
         private void StartTicking()
@@ -57,18 +46,9 @@ namespace ScoutBomb2
 
         private void btnGet1stHelp_Click(object sender, RoutedEventArgs e)
         {
-            ((App)Application.Current).Punish(30);
-            img1sthelp.Visibility = Visibility.Visible;
+            ((App)Application.Current).Punish(120);
             HelpPanel1st.Visibility = Visibility.Collapsed;
-            HelpPanel2nd.Visibility = Visibility.Visible;
-        }
-
-        private void btn2ndGetHelp_Click(object sender, RoutedEventArgs e)
-        {
-            ((App)Application.Current).Punish(30);
-            img1sthelp.Visibility = Visibility.Collapsed;
-            img2ndhelp.Visibility = Visibility.Visible;
-            HelpPanel2nd.Visibility = Visibility.Collapsed;
+            txtAnswer.Visibility = Visibility.Visible;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -94,9 +74,9 @@ namespace ScoutBomb2
 
         private void TestAnswer()
         {
-            if (string.Compare(txbAnswer.Text.Trim(), "BOMBEN SKAL AFBRYDES", StringComparison.OrdinalIgnoreCase) == 0)
+            if (string.Compare(txbAnswer.Text.Trim(),"I SKAL SKYNDE JER", StringComparison.OrdinalIgnoreCase) == 0)
             {
-                Frame.Navigate(typeof(Question2));
+                Frame.Navigate(typeof(Disarmed));
             }
             else
             {

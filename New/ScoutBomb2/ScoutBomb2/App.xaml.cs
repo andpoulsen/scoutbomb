@@ -45,6 +45,11 @@ namespace ScoutBomb2
             update(TimeLeft);
         }
 
+        public void Punish(int punishment)
+        {
+            TimeLeft = TimeLeft.Subtract(new TimeSpan(0, 0, punishment));
+        }
+
         public async void PlaySound(string filename)
         {
             var mysong = new MediaElement();
