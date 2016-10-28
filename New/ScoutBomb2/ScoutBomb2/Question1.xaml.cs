@@ -21,7 +21,7 @@ namespace ScoutBomb2
             var timeLeft = ((App)Application.Current).TimeLeft = new TimeSpan(0, 25, 0);
             txtTimeLeft.Text = timeLeft.ToString();
             
-            if (((App)App.Current).Easy)
+            if (((App)Application.Current).Easy)
             {
                 HelpPanel1st.Visibility = Visibility.Collapsed;
                 img2ndhelp.Visibility = Visibility.Collapsed;
