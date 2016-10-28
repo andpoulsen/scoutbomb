@@ -3,6 +3,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Navigation;
 
 namespace ScoutBomb2
@@ -25,6 +26,12 @@ namespace ScoutBomb2
         public bool Easy { get; set; }
 
         public TimeSpan TimeLeft { get; set; }
+
+        public TimeSpan Tick()
+        {
+            TimeLeft = TimeLeft.Subtract(new TimeSpan(0, 0, 1));
+            return TimeLeft;
+        }
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

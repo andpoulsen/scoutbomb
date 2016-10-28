@@ -1,7 +1,9 @@
 ﻿using System;
+using Windows.System.Threading;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -12,6 +14,8 @@ namespace ScoutBomb2
     /// </summary>
     public sealed partial class Question1 : Page
     {
+        private ThreadPoolTimer timer;
+
         public Question1()
         {
             InitializeComponent();
@@ -29,6 +33,22 @@ namespace ScoutBomb2
                 img2ndhelp.Visibility = Visibility.Collapsed;
                 HelpPanel2nd.Visibility = Visibility.Collapsed;
             }
+        }
+
+        private void StartTicking()
+        {
+            this.timer = ThreadPoolTimer.CreatePeriodicTimer(async (source) =>
+            {
+                await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
+                {
+                    UpdateTimeLeft(((App)Application.Current).Tick());
+                });
+            }, new TimeSpan(0, 0, 1));
+        }
+
+        private void UpdateTimeLeft(TimeSpan t)
+        {
+            txtTimeLeft.Text = t.ToString();
         }
 
         private void btnGet1stHelp_Click(object sender, RoutedEventArgs e)
@@ -80,5 +100,19 @@ namespace ScoutBomb2
                 txbAnswer.Text = string.Empty;
             }
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            StartTicking();
+        }
+
+        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+        {
+            timer.Cancel();
+            base.OnNavigatingFrom(e);
+        }
+
+        
     }
 }
