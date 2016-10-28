@@ -95,13 +95,14 @@ namespace ScoutBomb2
 
         private void TestAnswer()
         {
-            if (string.Compare(txbAnswer.Text.Trim(), "BOMBEN SKAL AFBRYDES", true) == 0)
+            if (string.Compare(txbAnswer.Text.Trim(), "BOMBEN SKAL AFBRYDES", StringComparison.OrdinalIgnoreCase) == 0)
             {
                 Frame.Navigate(typeof(Disarmed));
             }
             else
             {
                 WrongAnswer.Begin();
+                ((App)Application.Current).PlaySound("punish.wav");
                 txbAnswer.Text = string.Empty;
             }
         }

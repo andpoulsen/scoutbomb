@@ -118,9 +118,13 @@
   <ItemGroup>
     <Content Include="Assets\beep100.wav" />
     <Content Include="Assets\beep75.wav" />
+    <Content Include="Assets\disarm.wav" />
+    <Content Include="Assets\disarmed.wav" />
     <Content Include="Assets\explode.wav" />
     <Content Include="Assets\MorseAlfabetet.png" />
     <Content Include="Assets\Morsenøgle.png" />
+    <Content Include="Assets\plant.wav" />
+    <Content Include="Assets\punish.wav" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
