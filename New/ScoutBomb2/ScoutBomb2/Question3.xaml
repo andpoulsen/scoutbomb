@@ -37,7 +37,7 @@
                 </TextBlock>
                 <Button x:Name="btn2ndGetHelp" Content="Hjælp" HorizontalAlignment="Center" Click="btn2ndGetHelp_Click"/>
             </StackPanel>
-            <StackPanel x:Name="AnswerPanel" Orientation="Horizontal" Style="{StaticResource AnswerPanelStyle}">
+            <StackPanel x:Name="AnswerPanel" Orientation="Horizontal" Style="{StaticResource AnswerPanelStyle}" HorizontalAlignment="Center">
                 <TextBox x:Name="txbAnswer" TextWrapping="Wrap" Text="" PlaceholderText="Skriv svar her" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Margin="0,0,20,0" KeyDown="txbAnswer_KeyDown"/>
                 <Button x:Name="btnAnswer" Content="Svar" VerticalAlignment="Center" Click="btnAnswer_Click"/>
             </StackPanel>
