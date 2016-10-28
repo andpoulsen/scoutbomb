@@ -98,6 +98,9 @@
     <Compile Include="Disarmed.xaml.cs">
       <DependentUpon>Disarmed.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Explosion.xaml.cs">
+      <DependentUpon>Explosion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,9 @@
     <None Include="ScoutBomb2_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\beep100.wav" />
+    <Content Include="Assets\beep75.wav" />
+    <Content Include="Assets\explode.wav" />
     <Content Include="Assets\MorseAlfabetet.png" />
     <Content Include="Assets\Morsenøgle.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -133,6 +139,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Explosion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -142,9 +152,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -1,6 +1,7 @@
 ﻿using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,10 +28,31 @@ namespace ScoutBomb2
 
         public TimeSpan TimeLeft { get; set; }
 
-        public TimeSpan Tick()
+        public void Tick(Action<TimeSpan> update)
         {
             TimeLeft = TimeLeft.Subtract(new TimeSpan(0, 0, 1));
-            return TimeLeft;
+            if (TimeLeft.TotalSeconds > 500)
+            {
+                PlaySound("beep100.wav");
+            }else if (TimeLeft.TotalSeconds > 0)
+            {
+                PlaySound("beep75.wav");
+            }
+            else
+            {
+                ((Frame) Window.Current.Content).Navigate(typeof(Explosion));
+            }
+            update(TimeLeft);
+        }
+
+        public async void PlaySound(string filename)
+        {
+            var mysong = new MediaElement();
+            var folder = await Package.Current.InstalledLocation.GetFolderAsync("Assets");
+            var file = await folder.GetFileAsync(filename);
+            var stream = await file.OpenAsync(FileAccessMode.Read);
+            mysong.SetSource(stream, file.ContentType);
+            mysong.Play();
         }
 
         /// <summary>

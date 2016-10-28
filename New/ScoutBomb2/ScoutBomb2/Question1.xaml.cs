@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using Windows.Storage;
 using Windows.System.Threading;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
@@ -19,7 +21,7 @@ namespace ScoutBomb2
         public Question1()
         {
             InitializeComponent();
-            var timeLeft = ((App)Application.Current).TimeLeft = new TimeSpan(0, 25, 0);
+            var timeLeft = ((App)Application.Current).TimeLeft = new TimeSpan(0, 0, 10);
             txtTimeLeft.Text = timeLeft.ToString();
             
             if (((App)App.Current).Easy)
@@ -41,9 +43,14 @@ namespace ScoutBomb2
             {
                 await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
                 {
-                    UpdateTimeLeft(((App)Application.Current).Tick());
+                    ((App)Application.Current).Tick(UpdateTimeLeft);
                 });
             }, new TimeSpan(0, 0, 1));
+        }
+
+        private void StopTicking()
+        {
+            timer.Cancel();
         }
 
         private void UpdateTimeLeft(TimeSpan t)
@@ -67,11 +74,9 @@ namespace ScoutBomb2
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            Frame rootFrame = Window.Current.Content as Frame;
-
-            if (rootFrame.CanGoBack)
+            if (Frame.CanGoBack)
             {
-                rootFrame.GoBack();
+                Frame.GoBack();
             }
         }
 
@@ -109,7 +114,7 @@ namespace ScoutBomb2
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
         {
-            timer.Cancel();
+            StopTicking();
             base.OnNavigatingFrom(e);
         }
 

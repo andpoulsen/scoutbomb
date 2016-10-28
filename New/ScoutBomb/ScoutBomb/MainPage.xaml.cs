@@ -53,7 +53,6 @@ namespace ScoutBomb
             var stream = await file.OpenAsync(FileAccessMode.Read);
             mysong.SetSource(stream, file.ContentType);
             mysong.Play();
-
         }
 
         private void ReadQuestions()
