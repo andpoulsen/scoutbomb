@@ -86,7 +86,7 @@ namespace ScoutBomb2
             if (string.Compare(txbAnswer.Text.Trim(), "Anders er for sej til at programmere", StringComparison.OrdinalIgnoreCase) == 0)
             {
                 ((App)Application.Current).Punish(-600);
-                Frame.Navigate(typeof(Disarmed));
+                Frame.Navigate(typeof(Question5));
             }
             else
             {

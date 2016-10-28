@@ -11,26 +11,32 @@ namespace ScoutBomb2
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Question1 : Page
+    public sealed partial class Question5 : Page
     {
         private ThreadPoolTimer _timer;
 
-        public Question1()
+        public Question5()
         {
             InitializeComponent();
-            var timeLeft = ((App)Application.Current).TimeLeft = new TimeSpan(0, 0, 10);
+            var timeLeft = ((App)Application.Current).TimeLeft;
             txtTimeLeft.Text = timeLeft.ToString();
             
             if (((App)Application.Current).Easy)
             {
+                Code1.Visibility = Visibility.Collapsed;
                 HelpPanel1st.Visibility = Visibility.Collapsed;
                 img2ndhelp.Visibility = Visibility.Collapsed;
+                HelpPanel3rd.Visibility = Visibility.Collapsed;
+                img3rdhelp.Visibility = Visibility.Collapsed;
             }
             else
             {
-                img1sthelp.Visibility = Visibility.Collapsed;
-                img2ndhelp.Visibility = Visibility.Collapsed;
+                txt1stHelp.Visibility = Visibility.Collapsed;
                 HelpPanel2nd.Visibility = Visibility.Collapsed;
+                img2ndhelp.Visibility = Visibility.Collapsed;
+                HelpPanel3rd.Visibility = Visibility.Collapsed;
+                img3rdhelp.Visibility = Visibility.Collapsed;
+                
             }
         }
 
@@ -58,7 +64,8 @@ namespace ScoutBomb2
         private void btnGet1stHelp_Click(object sender, RoutedEventArgs e)
         {
             ((App)Application.Current).Punish(30);
-            img1sthelp.Visibility = Visibility.Visible;
+            Code1.Visibility = Visibility.Collapsed;
+            txt1stHelp.Visibility = Visibility.Visible;
             HelpPanel1st.Visibility = Visibility.Collapsed;
             HelpPanel2nd.Visibility = Visibility.Visible;
         }
@@ -66,9 +73,17 @@ namespace ScoutBomb2
         private void btn2ndGetHelp_Click(object sender, RoutedEventArgs e)
         {
             ((App)Application.Current).Punish(30);
-            img1sthelp.Visibility = Visibility.Collapsed;
             img2ndhelp.Visibility = Visibility.Visible;
             HelpPanel2nd.Visibility = Visibility.Collapsed;
+            HelpPanel3rd.Visibility = Visibility.Visible;
+        }
+
+        private void btn3rdGetHelp_Click(object sender, RoutedEventArgs e)
+        {
+            ((App)Application.Current).Punish(30);
+            HelpPanel3rd.Visibility = Visibility.Collapsed;
+            img2ndhelp.Visibility = Visibility.Collapsed;
+            img3rdhelp.Visibility = Visibility.Visible;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -94,9 +109,9 @@ namespace ScoutBomb2
 
         private void TestAnswer()
         {
-            if (string.Compare(txbAnswer.Text.Trim(), "BOMBEN SKAL AFBRYDES", StringComparison.OrdinalIgnoreCase) == 0)
+            if (string.Compare(txbAnswer.Text.Trim(), "Nu er tiden snart gået", StringComparison.OrdinalIgnoreCase) == 0)
             {
-                Frame.Navigate(typeof(Question2));
+                Frame.Navigate(typeof(Disarmed));
             }
             else
             {
