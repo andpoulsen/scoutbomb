@@ -123,7 +123,6 @@
     <Content Include="Assets\explode.wav" />
     <Content Include="Assets\MorseAlfabetet.png" />
     <Content Include="Assets\Morsenøgle.png" />
-    <Content Include="Assets\plant.wav" />
     <Content Include="Assets\punish.wav" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

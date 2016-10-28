@@ -118,7 +118,5 @@ namespace ScoutBomb2
             StopTicking();
             base.OnNavigatingFrom(e);
         }
-
-        
     }
 }
