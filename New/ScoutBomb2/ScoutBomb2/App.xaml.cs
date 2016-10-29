@@ -50,13 +50,14 @@ namespace ScoutBomb2
             TimeLeft = TimeLeft.Subtract(new TimeSpan(0, 0, punishment));
         }
 
-        public async void PlaySound(string filename)
+        public async void PlaySound(string filename, double volume = 0.25 )
         {
             var mysong = new MediaElement();
             var folder = await Package.Current.InstalledLocation.GetFolderAsync("Assets");
             var file = await folder.GetFileAsync(filename);
             var stream = await file.OpenAsync(FileAccessMode.Read);
             mysong.SetSource(stream, file.ContentType);
+            mysong.Volume = volume;
             mysong.Play();
         }
 

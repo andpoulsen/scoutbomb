@@ -18,7 +18,7 @@ namespace ScoutBomb2
         public Question1()
         {
             InitializeComponent();
-            var timeLeft = ((App)Application.Current).TimeLeft = new TimeSpan(0, 0, 10);
+            var timeLeft = ((App)Application.Current).TimeLeft = new TimeSpan(0, 25, 00);
             txtTimeLeft.Text = timeLeft.ToString();
             
             if (((App)Application.Current).Easy)
@@ -48,6 +48,7 @@ namespace ScoutBomb2
         private void StopTicking()
         {
             _timer.Cancel();
+            _timer = null;
         }
 
         private void UpdateTimeLeft(TimeSpan t)
@@ -73,10 +74,17 @@ namespace ScoutBomb2
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            if (Frame.CanGoBack)
+            if (this._timer == null)
             {
-                Frame.GoBack();
+                StartTicking();
+            }else
+            {
+                StopTicking();
             }
+            //if (Frame.CanGoBack)
+            //{
+            //    Frame.GoBack();
+            //}
         }
 
         private void btnAnswer_Click(object sender, RoutedEventArgs e)

@@ -18,7 +18,7 @@ namespace ScoutBomb2
         public Explosion()
         {
             this.InitializeComponent();
-            ((App)Application.Current).PlaySound("explode.wav");
+            ((App)Application.Current).PlaySound("explode.wav", 1);
             var i = 0;
             this._explodeTimer = ThreadPoolTimer.CreatePeriodicTimer(async (source) =>
             {

@@ -16,7 +16,7 @@
     </Page.Resources>
 
     <Grid x:Name="grid" Background="Black">
-        <Button x:Name="btnBack" Style="{StaticResource NavigationBackButtonNormalStyle}" VerticalAlignment="Top" d:LayoutOverrides="Width, Height" Click="btnBack_Click"/>
+        <Button x:Name="btnBack" Style="{StaticResource NavigationBackButtonNormalStyle}" VerticalAlignment="Top" d:LayoutOverrides="Width, Height" Click="btnBack_Click" Foreground="Black"/>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel x:Name="CountdownPanel" Orientation="Horizontal" HorizontalAlignment="Center" Style="{StaticResource CountdownPanelStyle}">
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="Tid tilbage:" Margin="0,0,20,0"/>
