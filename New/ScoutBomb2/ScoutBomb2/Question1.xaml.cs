@@ -18,7 +18,7 @@ namespace ScoutBomb2
         public Question1()
         {
             InitializeComponent();
-            var timeLeft = ((App)Application.Current).TimeLeft = new TimeSpan(0, 25, 00);
+            var timeLeft = ((App)Application.Current).TimeLeft = new TimeSpan(0, 8, 00);
             txtTimeLeft.Text = timeLeft.ToString();
             
             if (((App)Application.Current).Easy)
@@ -110,7 +110,7 @@ namespace ScoutBomb2
             {
                 WrongAnswer.Begin();
                 ((App)Application.Current).PlaySound("punish.wav");
-                txbAnswer.Text = string.Empty;
+                //txbAnswer.Text = string.Empty;
             }
         }
 

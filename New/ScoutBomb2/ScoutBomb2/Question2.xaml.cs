@@ -85,13 +85,13 @@ namespace ScoutBomb2
         {
             if (string.Compare(txbAnswer.Text.Trim(),"I SKAL SKYNDE JER", StringComparison.OrdinalIgnoreCase) == 0)
             {
-                Frame.Navigate(typeof(Question3));
+                Frame.Navigate(typeof(Disarmed));
             }
             else
             {
                 WrongAnswer.Begin();
                 ((App)Application.Current).PlaySound("punish.wav");
-                txbAnswer.Text = string.Empty;
+                //txbAnswer.Text = string.Empty;
             }
         }
 
